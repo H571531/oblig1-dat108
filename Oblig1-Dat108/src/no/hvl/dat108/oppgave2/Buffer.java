@@ -26,7 +26,6 @@ public class Buffer {
     public void add(Integer item) {
     	boolean erIkkeFull=false;
         while (true) {
-            // TODO
         	try {
         		
         			
