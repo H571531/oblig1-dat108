@@ -12,7 +12,7 @@ public class Ansatt {
 	private String etternavn;
 	private String kjonn;
 	private String stilling;
-	private Integer aarlonn;
+	private int aarlonn;
 	
 	
 	public Ansatt(String fornavn, String etternavn, String kjonn, String stilling, int aarlonn) {
@@ -25,7 +25,8 @@ public class Ansatt {
 	}
 	
 	public void endreLonn(Function <Integer, Integer> funksjon) {
-		setAarlonn(funksjon.apply(aarlonn));	
+		//setAarlonn(funksjon.apply(aarlonn));	
+		aarlonn=funksjon.apply(aarlonn);
 	}
 	
 	

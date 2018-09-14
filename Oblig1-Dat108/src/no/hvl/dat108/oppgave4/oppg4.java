@@ -3,6 +3,7 @@ package no.hvl.dat108.oppgave4;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import no.hvl.dat108.oppgave3.Ansatt;
@@ -33,18 +34,18 @@ public class oppg4 {
 						.count();
 		
 		//c) Regn ut gjennomsnittslønn til kvinnene
-			double gjlonnKvinner=ansatte.stream()
+			int sumLonnKvinner=ansatte.stream()
 							.filter(a->a.getKjonn().equals("Kvinne"))
-							.map(a->a.getAarlonn())
-							.reduce((a, acc)->acc=(acc+a)/ansatte.stream()
-																.filter(a->a.getKjonn().equals("Kvinne"))
-																.count())
-							);
-		
+							.map(a ->a.getAarlonn() )
+							.reduce((a,acc)->acc+a).orElse(null);
+			
+			double gjSnittKvinner=sumLonnKvinner/ansatte.stream().filter(a->a.getKjonn().equals("Kvinne")).count();
+			
+			
 		//d)Gi alle sjefer stilling="sjef" lønnsøkning på 7%
 			ansatte.stream()
 					.filter(a->a.getStilling().equals("sjef"))
-					.forEach(a->a.endreLonn());
+					.forEach(a->a.endreLonn(f -> f+f*(7/100)));
 		
 		//e)Finn ut om det er noen med lønn over 80 000
 			boolean lonnover=ansatte.stream()
@@ -56,15 +57,14 @@ public class oppg4 {
 		//g)Skriv ut de med lavest lønn
 			ansatte.stream()
 				.filter(a->a.getAarlonn()==ansatte.stream()
-											.mapToInt( b->b.getAarlonn() )
+											.mapToInt(b->b.getAarlonn())
 											.min()
 											.getAsInt())
-				.forEach(System.out::println));
+				.forEach(System.out::println);
 		//h)Finn summen av alle heltall mellom 1,1000 som er delig med 3 eller 5
 			int sum=IntStream.range(1, 10)
-						.filter(x->x%4==0)
-						.
-	System.out.println();
+						.filter(x->x%3==0||x%5==0)
+						.sum();
 	
 		
 	}
