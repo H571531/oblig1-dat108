@@ -1,5 +1,13 @@
 package no.hvl.dat108.oppgave2;
 
+/**
+ * 
+ * Klient-program for consumers og producers. Starter to threads med producers, og to threads med consumers.
+ * 
+ * @author Adrian Mortensen, Kristoffer Nome, Anders Simonsen
+ *
+ */
+
 public class Klient {
 
 	public static void main(String[] args) {
