@@ -1,7 +1,7 @@
 package no.hvl.dat108.oppgave2;
 
 /**
- * 
+ * DAT108 Oblig1, Oppgave 2
  * Klient-program for consumers og producers. Starter to threads med producers, og to threads med consumers.
  * 
  * @author Adrian Mortensen, Kristoffer Nome, Anders Simonsen

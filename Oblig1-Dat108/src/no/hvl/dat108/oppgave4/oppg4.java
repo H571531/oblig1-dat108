@@ -9,6 +9,17 @@ import java.util.stream.Stream;
 import no.hvl.dat108.oppgave3.Ansatt;
 import no.hvl.dat108.oppgave3.Oppg3;
 
+/**
+ * 
+ * DAT108 Oblig1, Oppgave 4
+ * Oppretter en liste med 10 ansatte.
+ * Skriv en klasse med en main()-metode som inneholder løsningen på
+ * delspørsmålene. Løsningene skal være funksjonelle,
+ * dvs. bruk stream(), map(), filter(), reduce() osv.
+ * Alle løsningene/svarene skal lagres i variabler og skrives ut på skjermen
+ * @author Adrian Mortensen, Kristoffer Nome, Anders Simonsen
+ *
+ */
 public class oppg4 {
 
 	public static void main(String[] args) {
