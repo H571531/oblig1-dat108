@@ -16,6 +16,10 @@ public class Buffer {
     private final static int SIZE = 10;
     private LinkedList<Integer> buffer = new LinkedList<Integer>();
     
+    /*
+     * Implementerer løsning funnet på https://en.wikipedia.org/wiki/Producer–consumer_problem#Using_semaphores
+     * som støtter flere producers og consumers.    
+     */
    
    /*
     * For å støtte flere producers og consumers opprettes tre semaforer. 
