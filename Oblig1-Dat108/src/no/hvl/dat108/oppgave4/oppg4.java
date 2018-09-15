@@ -7,6 +7,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import no.hvl.dat108.oppgave3.Ansatt;
+import no.hvl.dat108.oppgave3.Oppg3;
 
 public class oppg4 {
 
@@ -63,7 +64,7 @@ public class oppg4 {
 			
 			ansatte.stream()
 					.filter(a->a.getStilling().equals("sjef"))
-					.forEach(a->a.endreLonn(f -> f+(f*7)/100));
+					.forEach(a->a.endreLonn(Oppg3.endreprosent(7)));
 			
 			System.out.println("Etter endring: ");
 			ansatte.stream() //stream for å printe sjefer
